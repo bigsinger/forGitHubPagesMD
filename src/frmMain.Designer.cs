@@ -150,7 +150,7 @@
             this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "frmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "forGitHubPagesMD";
+            this.Text = "自动生成GitHubPages MD文件描述";
             this.Load += new System.EventHandler(this.frmMain_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
