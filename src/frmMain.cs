@@ -130,10 +130,32 @@ namespace forGitHubPagesMD
 
 
             des = string.Format(
-                "---\r\nlayout:\t\tpost\r\ncategory:\t\"{0}\"\r\ntitle:\t\t\"{1}\"\r\ntags:\t\t{2}\r\n---", 
+                "---\r\nlayout:\t\tpost\r\ncategory:\t\"{0}\"\r\ntitle:\t\t\"{1}\"\r\ntags:\t\t{2}\r\n---\r\n", 
                 this.cmbCat.Text, this.txtTitle.Text, tags);
             LOGD(des);
             Clipboard.SetDataObject(des);
+
+            string sDesktopPath = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory);
+            CreateMDFile(Path.Combine(sDesktopPath, title + ".md"), des);
+        }
+
+        private void CreateMDFile(string sFileName, string sMDDes)
+        {
+            if (File.Exists(sFileName))
+            {
+                DialogResult ret = MessageBox.Show(sFileName + "\n\n文件已经存在，是否替换？", "", MessageBoxButtons.YesNo);
+                if (ret==DialogResult.No)
+                {
+                    return;
+                }
+            }
+
+            FileStream fs = new FileStream(sFileName, FileMode.Create);
+            StreamWriter sw = new StreamWriter(fs, System.Text.Encoding.UTF8);
+            sw.Write(sMDDes);
+            sw.Flush();
+            fs.Close();
+            LOGD("已创建文件：" + sFileName);
         }
 
       

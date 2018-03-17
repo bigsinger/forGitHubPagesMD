@@ -66,10 +66,10 @@
                         | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
             this.rtLog.Font = new System.Drawing.Font("宋体", 9F);
-            this.rtLog.Location = new System.Drawing.Point(0, 218);
+            this.rtLog.Location = new System.Drawing.Point(0, 239);
             this.rtLog.Margin = new System.Windows.Forms.Padding(6);
             this.rtLog.Name = "rtLog";
-            this.rtLog.Size = new System.Drawing.Size(698, 188);
+            this.rtLog.Size = new System.Drawing.Size(601, 167);
             this.rtLog.TabIndex = 1;
             this.rtLog.Text = "";
             this.rtLog.TextChanged += new System.EventHandler(this.rtLog_TextChanged_1);
@@ -84,16 +84,16 @@
             this.cmbCat.Location = new System.Drawing.Point(51, 35);
             this.cmbCat.Margin = new System.Windows.Forms.Padding(6);
             this.cmbCat.Name = "cmbCat";
-            this.cmbCat.Size = new System.Drawing.Size(206, 29);
+            this.cmbCat.Size = new System.Drawing.Size(360, 29);
             this.cmbCat.TabIndex = 2;
             // 
             // btnStart
             // 
             this.btnStart.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnStart.Location = new System.Drawing.Point(511, 86);
+            this.btnStart.Location = new System.Drawing.Point(414, 86);
             this.btnStart.Margin = new System.Windows.Forms.Padding(6);
             this.btnStart.Name = "btnStart";
-            this.btnStart.Size = new System.Drawing.Size(187, 130);
+            this.btnStart.Size = new System.Drawing.Size(187, 151);
             this.btnStart.TabIndex = 4;
             this.btnStart.Text = "生成";
             this.toolTip1.SetToolTip(this.btnStart, "生成后自动复制到剪贴板");
@@ -111,7 +111,7 @@
             this.ctrlTags.Margin = new System.Windows.Forms.Padding(6);
             this.ctrlTags.MultiColumn = true;
             this.ctrlTags.Name = "ctrlTags";
-            this.ctrlTags.Size = new System.Drawing.Size(504, 130);
+            this.ctrlTags.Size = new System.Drawing.Size(407, 151);
             this.ctrlTags.TabIndex = 5;
             // 
             // label3
@@ -131,7 +131,7 @@
             this.txtTitle.Location = new System.Drawing.Point(51, 4);
             this.txtTitle.Margin = new System.Windows.Forms.Padding(6);
             this.txtTitle.Name = "txtTitle";
-            this.txtTitle.Size = new System.Drawing.Size(647, 26);
+            this.txtTitle.Size = new System.Drawing.Size(550, 26);
             this.txtTitle.TabIndex = 8;
             // 
             // frmMain
@@ -139,7 +139,7 @@
             this.AllowDrop = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(702, 409);
+            this.ClientSize = new System.Drawing.Size(605, 409);
             this.Controls.Add(this.ctrlTags);
             this.Controls.Add(this.txtTitle);
             this.Controls.Add(this.label3);
