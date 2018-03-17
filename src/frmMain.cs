@@ -105,7 +105,7 @@ namespace forGitHubPagesMD
             string time = DateTime.Now.ToString("yyyy-MM-dd");  // 2008-09-04
 
             title = time + "-" + this.txtTitle.Text;
-            LOGD(title + "\n");
+            LOGD(title + "\r\n");
 
             string tags = "";
             
@@ -130,7 +130,7 @@ namespace forGitHubPagesMD
 
 
             des = string.Format(
-                "---\nlayout:\t\tpost\ncategory:\t\"{0}\"\ntitle:\t\t\"{1}\"\ntags:\t\t{2}\n---", 
+                "---\r\nlayout:\t\tpost\r\ncategory:\t\"{0}\"\r\ntitle:\t\t\"{1}\"\r\ntags:\t\t{2}\r\n---", 
                 this.cmbCat.Text, this.txtTitle.Text, tags);
             LOGD(des);
             Clipboard.SetDataObject(des);

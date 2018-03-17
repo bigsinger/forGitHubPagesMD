@@ -43,7 +43,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(22, 15);
+            this.label1.Location = new System.Drawing.Point(1, 10);
             this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(56, 16);
@@ -53,7 +53,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(22, 54);
+            this.label2.Location = new System.Drawing.Point(1, 41);
             this.label2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(56, 16);
@@ -66,10 +66,10 @@
                         | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
             this.rtLog.Font = new System.Drawing.Font("宋体", 9F);
-            this.rtLog.Location = new System.Drawing.Point(0, 292);
+            this.rtLog.Location = new System.Drawing.Point(0, 218);
             this.rtLog.Margin = new System.Windows.Forms.Padding(6);
             this.rtLog.Name = "rtLog";
-            this.rtLog.Size = new System.Drawing.Size(829, 251);
+            this.rtLog.Size = new System.Drawing.Size(698, 188);
             this.rtLog.TabIndex = 1;
             this.rtLog.Text = "";
             this.rtLog.TextChanged += new System.EventHandler(this.rtLog_TextChanged_1);
@@ -81,19 +81,19 @@
                         | System.Windows.Forms.AnchorStyles.Right)));
             this.cmbCat.Font = new System.Drawing.Font("宋体", 16F);
             this.cmbCat.FormattingEnabled = true;
-            this.cmbCat.Location = new System.Drawing.Point(146, 47);
+            this.cmbCat.Location = new System.Drawing.Point(51, 35);
             this.cmbCat.Margin = new System.Windows.Forms.Padding(6);
             this.cmbCat.Name = "cmbCat";
-            this.cmbCat.Size = new System.Drawing.Size(232, 29);
+            this.cmbCat.Size = new System.Drawing.Size(206, 29);
             this.cmbCat.TabIndex = 2;
             // 
             // btnStart
             // 
             this.btnStart.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnStart.Location = new System.Drawing.Point(633, 112);
+            this.btnStart.Location = new System.Drawing.Point(511, 86);
             this.btnStart.Margin = new System.Windows.Forms.Padding(6);
             this.btnStart.Name = "btnStart";
-            this.btnStart.Size = new System.Drawing.Size(190, 175);
+            this.btnStart.Size = new System.Drawing.Size(187, 130);
             this.btnStart.TabIndex = 4;
             this.btnStart.Text = "生成";
             this.toolTip1.SetToolTip(this.btnStart, "生成后自动复制到剪贴板");
@@ -107,29 +107,31 @@
                         | System.Windows.Forms.AnchorStyles.Right)));
             this.ctrlTags.CheckOnClick = true;
             this.ctrlTags.FormattingEnabled = true;
-            this.ctrlTags.Location = new System.Drawing.Point(25, 112);
+            this.ctrlTags.Location = new System.Drawing.Point(4, 86);
             this.ctrlTags.Margin = new System.Windows.Forms.Padding(6);
             this.ctrlTags.MultiColumn = true;
             this.ctrlTags.Name = "ctrlTags";
-            this.ctrlTags.Size = new System.Drawing.Size(596, 172);
+            this.ctrlTags.Size = new System.Drawing.Size(504, 130);
             this.ctrlTags.TabIndex = 5;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(22, 90);
+            this.label3.Location = new System.Drawing.Point(1, 68);
             this.label3.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(56, 16);
             this.label3.TabIndex = 7;
-            this.label3.Text = "Tags：";
+            this.label3.Text = "标签：";
             // 
             // txtTitle
             // 
-            this.txtTitle.Location = new System.Drawing.Point(146, 9);
+            this.txtTitle.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtTitle.Location = new System.Drawing.Point(51, 4);
             this.txtTitle.Margin = new System.Windows.Forms.Padding(6);
             this.txtTitle.Name = "txtTitle";
-            this.txtTitle.Size = new System.Drawing.Size(664, 26);
+            this.txtTitle.Size = new System.Drawing.Size(647, 26);
             this.txtTitle.TabIndex = 8;
             // 
             // frmMain
@@ -137,10 +139,10 @@
             this.AllowDrop = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(833, 567);
+            this.ClientSize = new System.Drawing.Size(702, 409);
+            this.Controls.Add(this.ctrlTags);
             this.Controls.Add(this.txtTitle);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.ctrlTags);
             this.Controls.Add(this.btnStart);
             this.Controls.Add(this.cmbCat);
             this.Controls.Add(this.rtLog);
@@ -151,6 +153,7 @@
             this.Name = "frmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "自动生成GitHubPages MD文件描述";
+            this.TopMost = true;
             this.Load += new System.EventHandler(this.frmMain_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
