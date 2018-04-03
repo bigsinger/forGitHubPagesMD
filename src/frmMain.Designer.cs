@@ -38,6 +38,8 @@
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.label3 = new System.Windows.Forms.Label();
             this.txtTitle = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.textBoxPostDir = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -93,7 +95,7 @@
             this.btnStart.Location = new System.Drawing.Point(414, 86);
             this.btnStart.Margin = new System.Windows.Forms.Padding(6);
             this.btnStart.Name = "btnStart";
-            this.btnStart.Size = new System.Drawing.Size(187, 151);
+            this.btnStart.Size = new System.Drawing.Size(187, 109);
             this.btnStart.TabIndex = 4;
             this.btnStart.Text = "生成";
             this.toolTip1.SetToolTip(this.btnStart, "生成后自动复制到剪贴板");
@@ -111,7 +113,7 @@
             this.ctrlTags.Margin = new System.Windows.Forms.Padding(6);
             this.ctrlTags.MultiColumn = true;
             this.ctrlTags.Name = "ctrlTags";
-            this.ctrlTags.Size = new System.Drawing.Size(407, 151);
+            this.ctrlTags.Size = new System.Drawing.Size(407, 109);
             this.ctrlTags.TabIndex = 5;
             // 
             // label3
@@ -134,12 +136,35 @@
             this.txtTitle.Size = new System.Drawing.Size(550, 26);
             this.txtTitle.TabIndex = 8;
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(1, 204);
+            this.label4.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(136, 16);
+            this.label4.TabIndex = 9;
+            this.label4.Text = "博客_posts目录：";
+            // 
+            // textBoxPostDir
+            // 
+            this.textBoxPostDir.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxPostDir.Location = new System.Drawing.Point(135, 201);
+            this.textBoxPostDir.Margin = new System.Windows.Forms.Padding(6);
+            this.textBoxPostDir.Name = "textBoxPostDir";
+            this.textBoxPostDir.Size = new System.Drawing.Size(466, 26);
+            this.textBoxPostDir.TabIndex = 10;
+            this.textBoxPostDir.TextChanged += new System.EventHandler(this.textBoxPostDir_TextChanged);
+            // 
             // frmMain
             // 
             this.AllowDrop = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(605, 409);
+            this.Controls.Add(this.textBoxPostDir);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.ctrlTags);
             this.Controls.Add(this.txtTitle);
             this.Controls.Add(this.label3);
@@ -171,6 +196,8 @@
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtTitle;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox textBoxPostDir;
     }
 }
 

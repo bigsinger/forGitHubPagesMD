@@ -25,6 +25,8 @@ namespace forGitHubPagesMD
         {
             loadCats();
             loadTags();
+            string postPath = ConfigHelper.GetAppConfig("_posts");
+            this.textBoxPostDir.Text = postPath;
         }
 
         private bool loadCats()
@@ -135,8 +137,10 @@ namespace forGitHubPagesMD
             LOGD(des);
             Clipboard.SetDataObject(des);
 
-            string sDesktopPath = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory);
-            CreateMDFile(Path.Combine(sDesktopPath, title + ".md"), des);
+            string blogPath = Path.Combine(this.textBoxPostDir.Text, this.cmbCat.Text);
+            string mdFileName = Path.Combine(blogPath, title + ".md");
+            CreateMDFile(mdFileName, des);
+            System.Diagnostics.Process.Start("explorer.exe", "/select," + mdFileName);
         }
 
         private void CreateMDFile(string sFileName, string sMDDes)
@@ -156,6 +160,26 @@ namespace forGitHubPagesMD
             sw.Flush();
             fs.Close();
             LOGD("已创建文件：" + sFileName);
+        }
+
+        private void textBoxPostDir_TextChanged(object sender, EventArgs e)
+        {
+            string postPath = this.textBoxPostDir.Text;
+            string pathName = Path.GetFileName(postPath);
+            if (pathName.CompareTo("_posts")!=0)
+            {
+                MessageBox.Show("请输入博客的_posts目录的全路径!");
+                return;
+            }
+            else if (Directory.Exists(postPath)==false)
+            {
+                MessageBox.Show("请输入博客的_posts目录的全路径!");
+                return;
+            }
+            else
+            {
+                ConfigHelper.UpdateAppConfig("_posts", postPath);
+            }
         }
 
       
