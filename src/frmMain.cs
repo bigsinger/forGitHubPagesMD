@@ -132,7 +132,7 @@ namespace forGitHubPagesMD
 
 
             des = string.Format(
-                "---\r\nlayout:\t\tpost\r\ncategory:\t\"{0}\"\r\ntitle:\t\t\"{1}\"\r\ntags:\t\t{2}\r\n---\r\n", 
+                "---\r\nlayout:\t\tpost\r\ncategory:\t\"{0}\"\r\ntitle:\t\t\"{1}\"\r\ntags:\t\t{2}\r\n---\r\n- 目录\r\n{:toc}\r\n\r\n", 
                 this.cmbCat.Text, this.txtTitle.Text, tags);
             LOGD(des);
             Clipboard.SetDataObject(des);
